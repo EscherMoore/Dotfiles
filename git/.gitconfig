@@ -1,0 +1,9 @@
+[user]
+	name = EscherMoore
+	email = EscherMoore@users.noreply.github.com 
+[core]
+	editor = nvim
+[alias]
+    st = status
+[credential]
+	helper = store
