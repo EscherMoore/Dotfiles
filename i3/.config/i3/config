@@ -63,7 +63,7 @@ bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal 
+bindsym $mod+Return exec alacritty 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -430,7 +430,7 @@ for_window [class="^.*"] border pixel 1
 #exec_always --no-startup-id ~/.config/i3/restore.sh
 
 # Move cursor to desired position on startup
-xdotool mousemove 1280 1000
+exec xdotool mousemove 1280 1000
 
 # Lock screen without exiting i3 
 bindsym $mod+Control+l exec dm-tool switch-to-greeter
