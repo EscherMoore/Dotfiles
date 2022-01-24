@@ -435,5 +435,12 @@ exec xdotool mousemove 1280 1000
 # Lock screen without exiting i3 
 bindsym $mod+Control+l exec dm-tool switch-to-greeter
 
+# NordVPN
+exec nordvpn connect
+exec nordvpn set autoconnect enabled
+
+# Imwheel
+exec imwheel -b 45
+
 # Firefox
 bindsym $mod+Shift+s exec firefox --no-remote
