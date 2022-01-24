@@ -269,7 +269,7 @@ bar {
 
 bar {
 	output nonprimary
-	status_command i3blocks -c ~/.config/i3/i3blocks/i3blocks-monitor2.conf
+	status_command i3blocks -c ~/.config/i3blocks/screen-2
 	height 35
 	tray_output none
 	font pango:Hack 14

@@ -1,0 +1,107 @@
+# Global properties
+separator=true
+separator_block_width=20
+
+#[documentation]
+#full_text=Documentation
+#website=https://vivien.github.io/i3blocks
+#command=xdg-open "$website"
+#color=#f12711
+#[greetings]
+#color=#f5af19
+#command=echo "Hello, $USER!"
+#interval=once
+
+[cpu_usage]
+command=/usr/local/lib/i3blocks/cpu.sh
+interval=10
+LABEL=CPU Usage   : 
+#min_width=CPU: 100.00%
+#T_WARN=50
+#T_CRIT=80
+#DECIMALS=2
+#COLOR_NORMAL=#EBDBB2
+#COLOR_WARN=#FFFC00
+#COLOR_CRIT=#FF0000
+
+[memeory]
+label=Memory  : 
+command=/usr/local/lib/i3blocks/memory.sh
+interval=30
+#color=#bb819a
+
+#[bandwidth3]    
+#command=/usr/lib/i3blocks/bandwidth3/bandwidth3
+#interval=persist
+#markup=pango  
+#LABEL=<span font='FontAwesome'>  </span>
+#IFACE=[automatically determined]
+#DT=3
+#UNIT=Mb    
+# Exposed variables: rx, wx, tx, unit, iface
+#PRINTF_COMMAND=printf "${LABEL}%-5.1f/%5.1f %s/s\n", rx, wx, unit;
+
+#[weather]
+#command=echo "Weather  :$(curl wttr.in/Manassas?format=2)"
+#interval=43200
+#color=#bb819a
+
+[storage]
+command=/usr/local/lib/i3blocks/storage.sh
+interval=1800
+#color=#005ca3
+color=#f56022
+
+[vm_storage]
+command=/usr/local/lib/i3blocks/vmstorage.sh
+interval=1800
+color=#1792df
+#separator=false
+
+#[vpn_status]
+#label=VPN Status: 
+#command=/usr/local/lib/i3blocks/vpnstatus.sh
+#interval=15
+#color=#FADE8C
+#color=#f9f7f8
+
+#[vpn_virtual_location]
+#command=/usr/local/lib/i3blocks/vpnlocation.sh
+#interval=15
+#color=#e6b3b8
+
+#[mediaplayer]
+#label=  
+#command=/usr/local/lib/i3blocks/mediaplayer.sh
+#instance=spotify
+#interval=5
+#signal=10
+
+[ups_on_or_offline]
+label=UPS: 
+command=/usr/local/lib/i3blocks/batterystatus.sh
+interval=1
+color=#bb819a
+
+[ups_battery]
+command=echo "UPS Battery  : $(apcaccess status | sed -n 's/.*BCHARGE  : //p' | tr -d Percent)%"
+interval=60
+color=#bb819a
+
+[ups_timeleft]
+command=echo "UPS Life 祥 :$(apcaccess status | sed -n 's/.*TIMELEFT ://p' | tr -d Minutes)Mins"
+interval=60
+
+[time]
+#command=date '+%a %b %_d %Y %l:%M %p'
+command=echo " :$(date '+%l:%M:%S%P - %a, %b %_d')"
+interval=1
+color=#f56022
+#color=#040052  
+#color=#54051a
+#color=#f12711
+separator=false
+
+[spacer]
+command=echo ""
+interval=once
