@@ -1,0 +1,3 @@
+## Dotfiles
+
+Requires `stow`
